@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - MRFAB Autocenter</title>
+
+    <link rel="stylesheet" href="../css/style_carrinho.css">
+</head>
+
+<body>
+
+    <main id="geral">
+
+        <header id="cabecalho">
+
+            <div id="logo">
+                MRFAB Autocenter
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li>
+                        <a href="carrinho.html" class="ativo">
+                            <img src="../imagens/icone_carrinho_de_compras.png" alt="Carrinho">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section id="carrinho">
+
+            <h1>Carrinho de Compras</h1>
+
+            <div id="lista-produtos">
+
+                <div class="produto">
+
+                    <img src="../imagens/ferramentas.png" alt="Ferramentas">
+
+                    <div class="descricao">
+                        <h2>Ferramentas</h2>
+                        <p>Kit de ferramentas profissionais para oficinas mecânicas.</p>
+                    </div>
+
+                    <div class="preco">
+                        <h3>Preço</h3>
+                        <p>R$ 500,00</p>
+                    </div>
+
+                    <div class="quantidade">
+                        <h3>Quantidade</h3>
+                        <input type="number" value="1" min="1">
+                    </div>
+
+                    <div class="subtotal">
+                        <h3>Subtotal</h3>
+                        <p>R$ 500,00</p>
+                    </div>
+
+                </div>
+
+                <div class="produto">
+
+                    <img src="../imagens/torquimetro.png" alt="Torquímetro">
+
+                    <div class="descricao">
+                        <h2>Torquímetro</h2>
+                        <p>Ferramenta de precisão para aperto controlado de parafusos.</p>
+                    </div>
+
+                    <div class="preco">
+                        <h3>Preço</h3>
+                        <p>R$ 739,90</p>
+                    </div>
+
+                    <div class="quantidade">
+                        <h3>Quantidade</h3>
+                        <input type="number" value="1" min="1">
+                    </div>
+
+                    <div class="subtotal">
+                        <h3>Subtotal</h3>
+                        <p>R$ 739,90</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="resumo-compra">
+
+                <h2>Resumo da Compra</h2>
+
+                <div id="frete">
+
+                    <label for="cep">Calcular Frete</label>
+
+                    <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" maxlength="9">
+
+                    <button type="button" class="btn-frete">
+                        Calcular
+                    </button>
+
+                </div>
+
+                <div class="linha-resumo">
+                    <span>Subtotal:</span>
+                    <span>R$ 1.239,90</span>
+                </div>
+
+                <div class="linha-resumo">
+                    <span>Frete:</span>
+                    <span>Grátis</span>
+                </div>
+
+                <div class="linha-resumo total">
+                    <span>Total:</span>
+                    <span>R$ 1.239,90</span>
+                </div>
+
+                <div id="acoes">
+
+                    <a href="../index.html" class="btn-voltar">
+                        Continuar Comprando
+                    </a>
+
+                    <button type="button" class="btn-finalizar">
+                        Finalizar Compra
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer id="rodape">
+            <h2>&copy; 2026 MRFAB Autocenter S.A. Todos os direitos reservados.</h2>
+            <p>Formas de pagamento: Pix, Cartões de Débito e Crédito.</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

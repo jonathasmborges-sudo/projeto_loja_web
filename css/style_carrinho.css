@@ -1,0 +1,226 @@
+@import url(style_estrutura_pagina.css);
+
+/* reutilizando as variáveis */
+:root{
+    --cor01: #e8ebe5b4;
+    --cor02: #058cd7;
+    --cor03: #eee38f;
+    --branca: #ffffff;
+}
+
+/* área principal do carrinho */
+#carrinho{
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* título da página */
+#carrinho h1{
+    width: 100%;
+    text-align: center;
+    color: var(--cor02);
+    margin-bottom: 30px;
+}
+
+/* lista de produtos */
+#lista-produtos{
+    flex: 3;
+}
+
+/* resumo da compra */
+#resumo-compra{
+    flex: 0 0 280px;
+    border: 1px solid var(--cor02);
+    border-radius: 10px;
+    background-color: var(--branca);
+    padding: 20px;
+    height: fit-content;
+}
+
+/* cada produto do carrinho */
+.produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--cor02);
+    border-radius: 10px;
+    background-color: var(--branca);
+}
+
+.produto:hover{
+    transform: translateY(-4px);
+}
+
+/* imagem do produto */
+.produto img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* descrição */
+.descricao{
+    flex: 2;
+}
+
+.descricao h2{
+    color: var(--cor02);
+    margin-bottom: 10px;
+}
+
+.descricao p{
+    color: #555;
+    line-height: 1.5;
+}
+
+/* preço, quantidade e subtotal */
+.preco,
+.quantidade,
+.subtotal{
+    flex: 1;
+    text-align: center;
+}
+
+.preco h3,
+.quantidade h3,
+.subtotal h3{
+    color: var(--cor02);
+    margin-bottom: 10px;
+}
+
+/* campo quantidade */
+.quantidade input{
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid var(--cor02);
+    border-radius: 5px;
+}
+
+/* título do resumo */
+#resumo-compra h2{
+    text-align: center;
+    color: var(--cor02);
+    margin-bottom: 20px;
+}
+
+/* linhas do resumo */
+.linha-resumo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* destaque para o total */
+.total{
+    border-top: 2px solid var(--cor02);
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* área dos botões */
+#acoes{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* botão continuar comprando */
+.btn-voltar{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--cor03);
+    color: black;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+/* botão finalizar compra */
+.btn-finalizar{
+    border: none;
+    background-color: var(--cor02);
+    color: var(--branca);
+    padding: 12px;
+    height: 45px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: .3s;
+}
+
+/* efeito ao passar o mouse */
+.btn-voltar:hover{
+    background-color: #d8cb64;
+}
+
+.btn-finalizar:hover{
+    background-color: #046fa8;
+}
+
+/* área de cálculo do frete */
+#frete{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* título do frete */
+#frete label{
+    font-weight: bold;
+    color: var(--cor02);
+}
+
+/* campo CEP */
+#cep{
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid var(--cor02);
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+#cep:focus{
+    outline: none;
+    border-color: #046fa8;
+}
+
+/* botão calcular frete */
+.btn-frete{
+    height: 42px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cor03);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-frete:hover{
+    background-color: #d8cb64;
+}
+
+/* destaca a página atual do menu */
+#menu a.ativo{
+    color: var(--cor03);
+    font-weight: bold;
+}
