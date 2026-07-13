@@ -1,0 +1,81 @@
+@import url(style_estrutura_pagina.css);
+
+/* Variáveis de cores */
+:root{
+    --cor01: #e8ebe5b4;
+    --cor02: #058cd7;
+    --cor03: #eee38f;
+    --branca: #ffffff;
+}
+
+/* Área de login */
+#login-area{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* Título */
+#login-area h2{
+    color: var(--cor02);
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+#form-login{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Labels */
+#form-login label{
+    font-weight: bold;
+    color: var(--cor02);
+}
+
+/* Campos */
+.input01{
+    height: 40px;
+    padding: 8px;
+    border: 1px solid var(--cor02);
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Botão */
+.btn-login{
+    margin-top: 20px;
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cor02);
+    color: var(--branca);
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-login:hover{
+    background-color: var(--cor03);
+    color: black;
+}
+
+/* Texto */
+#login-area p{
+    margin-top: 20px;
+}
+
+/* Link */
+#login-area a{
+    color: var(--cor02);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#login-area a:hover{
+    text-decoration: underline;
+}
