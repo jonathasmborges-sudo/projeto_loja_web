@@ -1,5 +1,6 @@
 // Importando os produtos
 import { produtos } from "./lista_produtos.js";
+import { addItem } from "./carrinho.js";
 
 // Pegando elementos do DOM
 const sectionCards = document.querySelector("#cards");
