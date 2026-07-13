@@ -1,0 +1,46 @@
+@import url(style_estrutura_pagina.css);
+
+/* Variáveis de cores */
+:root{
+    --cor01: #e8ebe5b4;
+    --cor02: #058cd7;
+    --cor03: #eee38f;
+    --branca: #ffffff;
+}
+
+/* Área principal */
+#sobre{
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--branca);
+    border: 2px solid var(--cor02);
+    border-radius: 10px;
+}
+
+/* Título */
+#sobre h1{
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--cor02);
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Parágrafos */
+#sobre p{
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 40px;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #333333;
+}
+
+/* Destaques */
+#sobre strong{
+    color: var(--cor02);
+    font-weight: bold;
+}
