@@ -1,50 +1,114 @@
-import { listItens } from "./carrinho.js"
+// Importando a função para listar os itens do carrinho
+import { listItens } from "./carrinho.js";
 
-//Montar tela Carrinho
-const montaTelaCarrinho = () =>{
-const sectionItensCarrinho = document.querySelector('#itens-carrinho')
+// Pegando elemento do DOM
+const sectionListaProdutos = document.querySelector("#lista-produtos");
 
-sectionItensCarrinho.innerHTML = ''
+// Função para montar a tela do carrinho
+const montaTelaCarrinho = () => {
 
-listItens().forEach((elem, i)=>{
-   const sectionItem = document.createElement('section')
-   sectionItem.setAttribute('class', item)
+    // Limpando a área dos produtos
+    sectionListaProdutos.innerHTML = "";
 
-   const divImgItem = document.createElement('div')
-   divImgItem.setAttribute('class', 'img-item')
+    // Pegando os produtos armazenados na sessão
+    const itensCarrinho = listItens();
 
-   const imgItem = document.createElement('img')
-   imgItem.setAttribute('src', elem.caminho_imagem)
-   imgItem.setAttribute('alt', elem.descricao_produto)
+    // Verificando se existem produtos no carrinho
+    if (itensCarrinho.length === 0) {
 
-   imgItem.appendChild(imgItem)
+        sectionListaProdutos.innerHTML = `
+            <h2 style="text-align:center; color:#058cd7;">
+                Seu carrinho está vazio.
+            </h2>
+        `;
 
-   const divDescricaoItens = document.createElement('div')
-   divDescricaoItens.setAttribute('class', 'descricoes-itens')
+        return;
+    }
 
-   const divValores = document.createElement('div')
-   divValores.setAttribute('class','valores')
+    // Percorrendo os itens do carrinho
+    itensCarrinho.forEach((elem, i) => {
 
-   const pItem = document.createElement('p')
-   pItem.innerHTML = `R$ ${parseFloat(elem. valor_unitario).toFixed(2).replace('.',',')}`
+        // Criando o card do produto
+        const divProduto = document.createElement("div");
+        divProduto.setAttribute("class", "produto");
 
-   const divQuant = document.createElement('div')
-   divQuant.setAttribute('class', input-quantidade)
+        // Criando a imagem
+        const imgProduto = document.createElement("img");
+        imgProduto.setAttribute("src", "../" + elem.caminho_imagem);
+        imgProduto.setAttribute("alt", elem.descricao_produto);
 
-   const inputQuantidade = document.createElement('input')
-   inputQuantidade.setAttribute('type','number')
-   inputQuantidade.setAttribute('name' `quant${i}`)
-   inputQuantidade.setAttribute('id',`quant${i}`)
-   inputQuantidade.setAttribute('class','input-item')
-   inputQuantidade.setAttribute('value',1)
+        // Criando a descrição
+        const divDescricao = document.createElement("div");
+        divDescricao.setAttribute("class", "descricao");
 
-   divQuant.appendChild(inputQuantidade)
+        const h2Descricao = document.createElement("h2");
+        h2Descricao.innerHTML = elem.descricao_produto;
 
-   const pCalc = document.createElement('p')
-   pCalc.innerHTML = `R$ ${elem.valor_unitario * 1}`
+        const pDescricao = document.createElement("p");
+        pDescricao.innerHTML = `Unidade: ${elem.unidade}`;
 
-   divValores.appendChild(pItem)
-   divValores.appendChild(divQuant)
-   divValores.append(pCalc)
-})
-}
+        divDescricao.appendChild(h2Descricao);
+        divDescricao.appendChild(pDescricao);
+
+        // Criando o preço
+        const divPreco = document.createElement("div");
+        divPreco.setAttribute("class", "preco");
+
+        const h3Preco = document.createElement("h3");
+        h3Preco.innerHTML = "Preço";
+
+        const pPreco = document.createElement("p");
+        pPreco.innerHTML = `R$ ${parseFloat(elem.valor_unitario)
+            .toFixed(2)
+            .replace(".", ",")}`;
+
+        divPreco.appendChild(h3Preco);
+        divPreco.appendChild(pPreco);
+
+        // Criando quantidade
+        const divQuantidade = document.createElement("div");
+        divQuantidade.setAttribute("class", "quantidade");
+
+        const h3Quantidade = document.createElement("h3");
+        h3Quantidade.innerHTML = "Quantidade";
+
+        const inputQuantidade = document.createElement("input");
+        inputQuantidade.setAttribute("type", "number");
+        inputQuantidade.setAttribute("value", "1");
+        inputQuantidade.setAttribute("min", "1");
+        inputQuantidade.setAttribute("id", `quant${i}`);
+
+        divQuantidade.appendChild(h3Quantidade);
+        divQuantidade.appendChild(inputQuantidade);
+
+        // Criando subtotal
+        const divSubtotal = document.createElement("div");
+        divSubtotal.setAttribute("class", "subtotal");
+
+        const h3Subtotal = document.createElement("h3");
+        h3Subtotal.innerHTML = "Subtotal";
+
+        const pSubtotal = document.createElement("p");
+        pSubtotal.innerHTML = `R$ ${parseFloat(elem.valor_unitario)
+            .toFixed(2)
+            .replace(".", ",")}`;
+
+        divSubtotal.appendChild(h3Subtotal);
+        divSubtotal.appendChild(pSubtotal);
+
+        // Adicionando os elementos ao card
+        divProduto.appendChild(imgProduto);
+        divProduto.appendChild(divDescricao);
+        divProduto.appendChild(divPreco);
+        divProduto.appendChild(divQuantidade);
+        divProduto.appendChild(divSubtotal);
+
+        // Adicionando o card à página
+        sectionListaProdutos.appendChild(divProduto);
+
+    });
+
+};
+
+// Chamando a função para montar o carrinho
+montaTelaCarrinho();

@@ -7,7 +7,6 @@
     <title>Carrinho de Compras - MRFAB Autocenter</title>
 
     <link rel="stylesheet" href="../css/style_carrinho.css">
-    <link rel="stylesheet" href="../js/tela_carrinho.js">
 </head>
 
 <body>
@@ -40,61 +39,8 @@
 
             <h1>Carrinho de Compras</h1>
 
-            <div id="lista-produtos">
-
-                <div class="produto">
-
-                    <img src="../imagens/ferramentas.png" alt="Ferramentas">
-
-                    <div class="descricao">
-                        <h2>Ferramentas</h2>
-                        <p>Kit de ferramentas profissionais para oficinas mecânicas.</p>
-                    </div>
-
-                    <div class="preco">
-                        <h3>Preço</h3>
-                        <p>R$ 500,00</p>
-                    </div>
-
-                    <div class="quantidade">
-                        <h3>Quantidade</h3>
-                        <input type="number" value="1" min="1">
-                    </div>
-
-                    <div class="subtotal">
-                        <h3>Subtotal</h3>
-                        <p>R$ 500,00</p>
-                    </div>
-
-                </div>
-
-                <div class="produto">
-
-                    <img src="../imagens/torquimetro.png" alt="Torquímetro">
-
-                    <div class="descricao">
-                        <h2>Torquímetro</h2>
-                        <p>Ferramenta de precisão para aperto controlado de parafusos.</p>
-                    </div>
-
-                    <div class="preco">
-                        <h3>Preço</h3>
-                        <p>R$ 739,90</p>
-                    </div>
-
-                    <div class="quantidade">
-                        <h3>Quantidade</h3>
-                        <input type="number" value="1" min="1">
-                    </div>
-
-                    <div class="subtotal">
-                        <h3>Subtotal</h3>
-                        <p>R$ 739,90</p>
-                    </div>
-
-                </div>
-
-            </div>
+            <!-- Os produtos serão inseridos pelo JavaScript -->
+            <div id="lista-produtos"></div>
 
             <div id="resumo-compra">
 
@@ -104,7 +50,11 @@
 
                     <label for="cep">Calcular Frete</label>
 
-                    <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" maxlength="9">
+                    <input type="text"
+                        id="cep"
+                        name="cep"
+                        placeholder="Digite seu CEP"
+                        maxlength="9">
 
                     <button type="button" class="btn-frete">
                         Calcular
@@ -114,7 +64,7 @@
 
                 <div class="linha-resumo">
                     <span>Subtotal:</span>
-                    <span>R$ 1.239,90</span>
+                    <span>R$ 0,00</span>
                 </div>
 
                 <div class="linha-resumo">
@@ -124,7 +74,7 @@
 
                 <div class="linha-resumo total">
                     <span>Total:</span>
-                    <span>R$ 1.239,90</span>
+                    <span>R$ 0,00</span>
                 </div>
 
                 <div id="acoes">
@@ -149,6 +99,8 @@
         </footer>
 
     </main>
+
+    <script type="module" src="../js/tela_carrinho.js"></script>
 
 </body>
 
