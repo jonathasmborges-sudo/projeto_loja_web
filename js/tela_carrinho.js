@@ -1,5 +1,5 @@
 // Importando a função para listar os itens do carrinho
-import { listItens } from "./carrinho.js";
+import { listItens, removeItem } from "./carrinho.js";
 
 // Pegando elemento do DOM
 const sectionListaProdutos = document.querySelector("#lista-produtos");
@@ -103,12 +103,29 @@ const montaTelaCarrinho = () => {
         divSubtotal.appendChild(h3Subtotal);
         divSubtotal.appendChild(pSubtotal);
 
+        // Criando botão para remover o produto
+const btnRemover = document.createElement("button");
+btnRemover.setAttribute("class", "btn-remover");
+btnRemover.textContent = "Remover";
+
+// Evento para remover o item do carrinho
+btnRemover.addEventListener("click", () => {
+
+    removeItem(i);
+
+    montaTelaCarrinho();
+
+});
+
         // Adicionando os elementos ao card
         divProduto.appendChild(imgProduto);
         divProduto.appendChild(divDescricao);
         divProduto.appendChild(divPreco);
         divProduto.appendChild(divQuantidade);
         divProduto.appendChild(divSubtotal);
+        divProduto.appendChild(btnRemover);
+
+sectionListaProdutos.appendChild(divProduto);
 
         // Adicionando o card à página
         sectionListaProdutos.appendChild(divProduto);
