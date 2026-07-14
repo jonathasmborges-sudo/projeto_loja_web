@@ -4,6 +4,10 @@ import { listItens } from "./carrinho.js";
 // Pegando elemento do DOM
 const sectionListaProdutos = document.querySelector("#lista-produtos");
 
+// Pegando elementos do resumo da compra
+const spanSubtotal = document.querySelector("#subtotal-compra");
+const spanTotal = document.querySelector("#total-compra");
+
 // Função para montar a tela do carrinho
 const montaTelaCarrinho = () => {
 
@@ -12,6 +16,9 @@ const montaTelaCarrinho = () => {
 
     // Pegando os produtos armazenados na sessão
     const itensCarrinho = listItens();
+
+    // Atualizando o resumo da compra
+    atualizarResumo(itensCarrinho);
 
     // Verificando se existem produtos no carrinho
     if (itensCarrinho.length === 0) {
@@ -107,6 +114,22 @@ const montaTelaCarrinho = () => {
         sectionListaProdutos.appendChild(divProduto);
 
     });
+
+};
+
+// Função para atualizar o resumo da compra
+const atualizarResumo = (itensCarrinho) => {
+
+    let total = 0;
+
+    itensCarrinho.forEach((item) => {
+        total += item.valor_unitario;
+    });
+
+    const valorFormatado = `R$ ${total.toFixed(2).replace(".", ",")}`;
+
+    spanSubtotal.textContent = valorFormatado;
+    spanTotal.textContent = valorFormatado;
 
 };
 
