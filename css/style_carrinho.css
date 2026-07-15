@@ -224,3 +224,36 @@
     color: var(--cor03);
     font-weight: bold;
 }
+
+/* ===========================
+   Botão Remover
+=========================== */
+
+.btn-remover{
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+.btn-remover img{
+
+    width: 28px;
+    height: 28px;
+
+    transition: .25s;
+
+}
+
+.btn-remover:hover img{
+
+    transform: scale(1.12);
+
+}
+
+.btn-remover:active img{
+
+    transform: scale(.92);
+
+}

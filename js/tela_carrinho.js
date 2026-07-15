@@ -106,7 +106,13 @@ const montaTelaCarrinho = () => {
         // Criando botão para remover o produto
 const btnRemover = document.createElement("button");
 btnRemover.setAttribute("class", "btn-remover");
-btnRemover.textContent = "Remover";
+
+// Criando o ícone do botão
+const imgRemover = document.createElement("img");
+imgRemover.setAttribute("src", "../imagens/icone_remover.png");
+imgRemover.setAttribute("alt", "Remover produto");
+
+btnRemover.appendChild(imgRemover);
 
 // Evento para remover o item do carrinho
 btnRemover.addEventListener("click", () => {
