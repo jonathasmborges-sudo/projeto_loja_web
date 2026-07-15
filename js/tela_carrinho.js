@@ -103,9 +103,10 @@ const montaTelaCarrinho = () => {
         divSubtotal.appendChild(h3Subtotal);
         divSubtotal.appendChild(pSubtotal);
 
-        // Criando botão para remover o produto
+      // Criando botão para remover o produto
 const btnRemover = document.createElement("button");
 btnRemover.setAttribute("class", "btn-remover");
+btnRemover.setAttribute("title", "Remover produto");
 
 // Criando o ícone do botão
 const imgRemover = document.createElement("img");
@@ -114,12 +115,22 @@ imgRemover.setAttribute("alt", "Remover produto");
 
 btnRemover.appendChild(imgRemover);
 
+// Criando a área onde ficará o botão
+const divRemover = document.createElement("div");
+divRemover.setAttribute("class", "remover");
+
+divRemover.appendChild(btnRemover);
+
 // Evento para remover o item do carrinho
 btnRemover.addEventListener("click", () => {
 
-    removeItem(i);
+    if (confirm(`Tem certeza que deseja remover ${elem.descricao_produto} do carrinho?`)) {
 
-    montaTelaCarrinho();
+        removeItem(i);
+
+        montaTelaCarrinho();
+
+    }
 
 });
 
@@ -129,9 +140,7 @@ btnRemover.addEventListener("click", () => {
         divProduto.appendChild(divPreco);
         divProduto.appendChild(divQuantidade);
         divProduto.appendChild(divSubtotal);
-        divProduto.appendChild(btnRemover);
-
-sectionListaProdutos.appendChild(divProduto);
+        divProduto.appendChild(divRemover);
 
         // Adicionando o card à página
         sectionListaProdutos.appendChild(divProduto);

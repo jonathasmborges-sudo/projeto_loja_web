@@ -228,6 +228,17 @@
 /* ===========================
    Botão Remover
 =========================== */
+/* Área do botão remover */
+
+.remover{
+
+    width: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .btn-remover{
 
@@ -239,8 +250,8 @@
 
 .btn-remover img{
 
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
 
     transition: .25s;
 
@@ -248,7 +259,8 @@
 
 .btn-remover:hover img{
 
-    transform: scale(1.12);
+    transform: scale(1.18);
+    opacity: .8;
 
 }
 
