@@ -2,11 +2,46 @@
 const itensCarrinho =
 JSON.parse(sessionStorage.getItem("carrinhoSessao")) || [];
 
+// Função item
+const item = (objProduto)=>{
+
+    const item = {
+        id_produto: objProduto.id_produto,
+        descricao_produto: objProduto.descricao_produto,
+        valor_unitario: objProduto.valor_unitario,
+        unidade: objProduto.unidade,
+        caminho_imagem: objProduto.caminho_imagem,
+        quantidade : 1
+    }
+
+return item
+
+}
+
+
 // Função para adicionar um item
-const addItem = (objItem) => {
+const addItem = (objProduto) => {
 
-    itensCarrinho.push(objItem);
+    // Procura se o produto já existe no carrinho
+    const indiceProduto = itensCarrinho.findIndex(
+        (elem) => elem.id_produto === objProduto.id_produto
+    );
 
+    // Produto já existe
+    if (indiceProduto !== -1) {
+
+        itensCarrinho[indiceProduto].quantidade++;
+
+    }
+
+    // Produto ainda não existe
+    else {
+
+        itensCarrinho.push(item(objProduto));
+
+    }
+
+    // Atualiza o sessionStorage
     sessionStorage.setItem(
         "carrinhoSessao",
         JSON.stringify(itensCarrinho)

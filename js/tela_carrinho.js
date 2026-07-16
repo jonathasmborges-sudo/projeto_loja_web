@@ -81,7 +81,7 @@ const montaTelaCarrinho = () => {
 
         const inputQuantidade = document.createElement("input");
         inputQuantidade.setAttribute("type", "number");
-        inputQuantidade.setAttribute("value", "1");
+        inputQuantidade.setAttribute("value", elem.quantidade);
         inputQuantidade.setAttribute("min", "1");
         inputQuantidade.setAttribute("id", `quant${i}`);
 
