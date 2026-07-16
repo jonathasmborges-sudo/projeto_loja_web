@@ -85,6 +85,38 @@ const montaTelaCarrinho = () => {
         inputQuantidade.setAttribute("min", "1");
         inputQuantidade.setAttribute("id", `quant${i}`);
 
+        // Atualiza a quantidade do produto
+inputQuantidade.addEventListener("change", () => {
+
+    let quantidade = parseInt(inputQuantidade.value);
+
+    // Não permite valores menores que 1
+    if (isNaN(quantidade) || quantidade < 1) {
+
+        quantidade = 1;
+        inputQuantidade.value = 1;
+
+    }
+
+    // Atualiza a quantidade do item
+    elem.quantidade = quantidade;
+
+    // Salva novamente no sessionStorage
+    sessionStorage.setItem(
+        "carrinhoSessao",
+        JSON.stringify(itensCarrinho)
+    );
+
+    // Atualiza o subtotal do produto
+    pSubtotal.innerHTML = `R$ ${(elem.valor_unitario * quantidade)
+        .toFixed(2)
+        .replace(".", ",")}`;
+
+    // Atualiza o resumo
+    atualizarResumo(itensCarrinho);
+
+});
+
         divQuantidade.appendChild(h3Quantidade);
         divQuantidade.appendChild(inputQuantidade);
 
@@ -96,9 +128,9 @@ const montaTelaCarrinho = () => {
         h3Subtotal.innerHTML = "Subtotal";
 
         const pSubtotal = document.createElement("p");
-        pSubtotal.innerHTML = `R$ ${parseFloat(elem.valor_unitario)
-            .toFixed(2)
-            .replace(".", ",")}`;
+        pSubtotal.innerHTML = `R$ ${(elem.valor_unitario * elem.quantidade)
+    .toFixed(2)
+    .replace(".", ",")}`;
 
         divSubtotal.appendChild(h3Subtotal);
         divSubtotal.appendChild(pSubtotal);
@@ -154,9 +186,9 @@ const atualizarResumo = (itensCarrinho) => {
 
     let total = 0;
 
-    itensCarrinho.forEach((item) => {
-        total += item.valor_unitario;
-    });
+   itensCarrinho.forEach((item) => {
+    total += item.valor_unitario * item.quantidade;
+});
 
     const valorFormatado = `R$ ${total.toFixed(2).replace(".", ",")}`;
 
