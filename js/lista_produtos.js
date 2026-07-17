@@ -288,8 +288,115 @@ export const produtos = [
         caminho_imagem: "imagens/palheta_limpador.png",
         caminho_secao: "#acessorios",
         secao: "Acessórios"
-
-
-    
+    },
+     {
+        id_produto: 30,
+        id_secao: 3,
+        descricao_produto: "Bobina de Ignição Bosch",
+        valor_unitario: 249.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/bobina_ignicao_bosch.png",
+        caminho_secao: "#eletrica",
+        secao: "Elétrica"
+    },
+    {
+        id_produto: 31,
+        id_secao: 6,
+        descricao_produto: "Bomba de Combustível Bosch",
+        valor_unitario: 329.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/bomba_combustivel_bosch.png",
+        caminho_secao: "#motores",
+        secao: "Motores"
+    },
+    {
+        id_produto: 32,
+        id_secao: 3,
+        descricao_produto: "Carregador Inteligente de Bateria",
+        valor_unitario: 699.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/carregador_bateria.png",
+        caminho_secao: "#eletrica",
+        secao: "Elétrica"
+    },
+    {
+        id_produto: 33,
+        id_secao: 10,
+        descricao_produto: "Fita Dupla Face 3M Automotiva",
+        valor_unitario: 39.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/fita_dupla_face_3m.png",
+        caminho_secao: "#acessorios",
+        secao: "Acessórios"
+    },
+    {
+        id_produto: 34,
+        id_secao: 3,
+        descricao_produto: "Limpa Contato Wurth",
+        valor_unitario: 54.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/limpa_contato_wurth.png",
+        caminho_secao: "#eletrica",
+        secao: "Elétrica"
+    },
+    {
+        id_produto: 35,
+        id_secao: 10,
+        descricao_produto: "Palheta Traseira Bosch",
+        valor_unitario: 79.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/palheta_traseira_bosch.png",
+        caminho_secao: "#acessorios",
+        secao: "Acessórios"
+    },
+    {
+        id_produto: 36,
+        id_secao: 8,
+        descricao_produto: "Pivô de Suspensão Cofap",
+        valor_unitario: 119.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/pivo_suspensao_cofap.png",
+        caminho_secao: "#suspensao",
+        secao: "Suspensão"
+    },
+    {
+        id_produto: 37,
+        id_secao: 7,
+        descricao_produto: "Radiador Valeo",
+        valor_unitario: 319.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/radiador_valeo.png",
+        caminho_secao: "#arrefecimento",
+        secao: "Arrefecimento"
+    },
+    {
+        id_produto: 38,
+        id_secao: 8,
+        descricao_produto: "Rolamento de Roda SKF",
+        valor_unitario: 139.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/rolamento_roda_skf.png",
+        caminho_secao: "#suspensao",
+        secao: "Suspensão"
+    },
+    {
+        id_produto: 39,
+        id_secao: 6,
+        descricao_produto: "Sensor MAP Bosch",
+        valor_unitario: 289.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/sensor_map_bosch.png",
+        caminho_secao: "#motores",
+        secao: "Motores"
+    },
+    {
+        id_produto: 40,
+        id_secao: 8,
+        descricao_produto: "Terminal de Direção Nakata",
+        valor_unitario: 149.90,
+        unidade: "UN",
+        caminho_imagem: "imagens/terminal_direcao_nakata.png",
+        caminho_secao: "#suspensao",
+        secao: "Suspensão"
     }
 ];
