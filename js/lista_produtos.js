@@ -191,7 +191,7 @@ export const produtos = [
     },
     {
         id_produto: 20,
-        id_secao: 6,
+        id_secao: 8,
         descricao_produto: "Amortecedor Cofap Dianteiro",
         valor_unitario: 489.90,
         unidade: "UN",
@@ -201,7 +201,7 @@ export const produtos = [
     },
     {
         id_produto: 21,
-        id_secao: 2,
+        id_secao: 9,
         descricao_produto: "Disco de Freio Ventilado",
         valor_unitario: 329.90,
         unidade: "PAR",
@@ -211,7 +211,7 @@ export const produtos = [
     },
     {
         id_produto: 22,
-        id_secao: 2,
+        id_secao: 9,
         descricao_produto: "Pastilha de Freio Bosch",
         valor_unitario: 169.90,
         unidade: "JOGO",
@@ -221,73 +221,73 @@ export const produtos = [
     },
     {
         id_produto: 23,
-        id_secao: 3,
+        id_secao: 11,
         descricao_produto: "Filtro de Ar do Motor",
         valor_unitario: 49.90,
         unidade: "UN",
         caminho_imagem: "imagens/filtro_ar_motor.png",
-        caminho_secao: "#eletrica",
-        secao: "Elétrica"
+        caminho_secao: "#filtros",
+        secao: "Filtros"
     },
     {
         id_produto: 24,
-        id_secao: 6,
+        id_secao: 11,
         descricao_produto: "Filtro de Combustível Bosch",
         valor_unitario: 64.90,
         unidade: "UN",
         caminho_imagem: "imagens/filtro_combustivel_bosch.png",
-        caminho_secao: "#motores",
-        secao: "Motores"
+        caminho_secao: "#filtros",
+        secao: "Filtros"
     },
     {
         id_produto: 25,
-        id_secao: 6,
+        id_secao: 11,
         descricao_produto: "Filtro de Óleo Mann",
         valor_unitario: 39.90,
         unidade: "UN",
         caminho_imagem: "imagens/filtro_oleo_mann.png",
-        caminho_secao: "#motores",
-        secao: "Motores"
+        caminho_secao: "#filtros",
+        secao: "Filtros"
     },
     {
         id_produto: 26,
-        id_secao: 6,
+        id_secao: 12,
         descricao_produto: "Óleo Shell Helix 5W30 - 1 Litro",
         valor_unitario: 54.90,
         unidade: "L",
         caminho_imagem: "imagens/oleo_shell_5w30.png",
-        caminho_secao: "#motores",
-        secao: "Motores"
+        caminho_secao: "#lubrificantes",
+        secao: "Lubrificantes"
     },
     {
         id_produto: 27,
-        id_secao: 3,
+        id_secao: 6,
         descricao_produto: "Jogo de Velas Bosch",
         valor_unitario: 139.90,
         unidade: "JOGO",
         caminho_imagem: "imagens/vela_ignicao_bosch.png",
-        caminho_secao: "#eletrica",
-        secao: "Elétrica"
+        caminho_secao: "#motores",
+        secao: "Motores"
     },
     {
         id_produto: 28,
-        id_secao: 5,
+        id_secao: 10,
         descricao_produto: "Retrovisor Elétrico",
         valor_unitario: 289.90,
         unidade: "UN",
         caminho_imagem: "imagens/retrovisor.png",
-        caminho_secao: "#equipamentos",
-        secao: "Equipamentos"
+        caminho_secao: "#acessorios",
+        secao: "Acessórios"
     },
     {
         id_produto: 29,
-        id_secao: 5,
+        id_secao: 10,
         descricao_produto: "Palheta Limpador de Para-brisa",
         valor_unitario: 79.90,
         unidade: "PAR",
         caminho_imagem: "imagens/palheta_limpador.png",
-        caminho_secao: "#equipamentos",
-        secao: "Equipamentos"
+        caminho_secao: "#acessorios",
+        secao: "Acessórios"
 
 
     
